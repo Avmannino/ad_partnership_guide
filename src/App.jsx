@@ -1,9 +1,8 @@
 import "./App.css";
 
 const aboutParagraphs = [
-  "Opened in 2025, Wings Arena was built around a simple mission: to bring people together to share the joy of ice sports, creating memories and connections in a friendly, welcoming environment.",
   "Our indoor rink welcomes players, families, and guests year-round from across the greater Metro and Tri-State area.",
-  "With spectator seating, a pro shop, rental skates, and a welcoming community atmosphere, Wings Arena is more than just a rink; it is a destination for games, celebrations, and lasting memories.",
+  "With over 200 spectator seats, a pro shop with rental skates, and a self-serve beer wall, Wings Arena is more than just a rink; it's a community destination for games, celebrations, and lasting memories.",
 ];
 
 const dasherViews = [
@@ -25,10 +24,9 @@ const namingBenefits = [
 
 const contactPeople = [
   {
-    name: "Gina Driscoll",
-    title: "Special Projects",
-    email: "gdriscoll@wingsarena.com",
-    phone: "(203) 745-9929",
+    name: "Joe Wanderlingh",
+    title: "Program Director",
+    email: "jwanderlingh@wingsarena.com",
   },
   {
     name: "Francois Magnant",
@@ -64,11 +62,11 @@ function PlaceholderImage({ src, alt, className = "" }) {
   );
 }
 
-function BrandLogo({ className = "", alt = "Wings Arena logo" }) {
+function BrandLogo({ className = "", alt = "Wings Arena logo", src = "/images/wings-logo.png" }) {
   return (
     <div className={`brandLogoWrap ${className}`}>
       <img
-        src="/images/wings-logo.png"
+        src={src}
         alt={alt}
         className="brandLogo"
         onError={(e) => {
@@ -118,7 +116,7 @@ export default function App() {
         <section className="pageSection aboutSection">
           <div className="aboutTopImages">
             <PlaceholderImage
-              src="/images/about-exterior.jpeg"
+              src="/images/about-exterior.jpg"
               alt="Arena exterior"
               className="aboutTopImage"
             />
@@ -129,16 +127,21 @@ export default function App() {
             />
           </div>
 
-          <div className="aboutContent">
+          <div className="aboutBottom">
             <div className="aboutLeft">
-              <div className="patternPanel">
-                <p className="eyebrow eyebrow--red">About Us</p>
-                <h2 className="patternTitle">OUR STORY & MISSION</h2>
-                <BrandLogo className="patternBrandLogo" alt="Wings Arena logo in about section" />
-              </div>
+              <BrandLogo className="patternBrandLogo" alt="Wings Arena logo in about section" src="/images/wings-logo-alt.png" />
+              <h2 className="aboutUsHeading">ABOUT US</h2>
+              <p className="aboutMission">OUR STORY & MISSION</p>
             </div>
 
             <div className="aboutRight">
+              <p>
+                Opened in 2025, Wings Arena was built around a simple mission:
+                to <strong>bring people together</strong> to share the joy of
+                ice sports,{" "}
+                <strong>creating memories and connections</strong> in a
+                friendly, welcoming environment.
+              </p>
               {aboutParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
