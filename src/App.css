@@ -97,12 +97,12 @@ img {
 .sectionTitle h2 {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(2.15rem, 5vw, 5.2rem);
+  font-size: clamp(2.15rem, 4vw, 4.2rem);
   line-height: 0.9;
   letter-spacing: -0.05em;
   text-transform: uppercase;
   font-weight: 900;
-  text-wrap: balance;
+  white-space: nowrap;
 }
 
 .sectionIntro {
@@ -141,12 +141,12 @@ img {
 }
 
 .patternBrandLogo {
-  margin-top: 10px;
-  margin-bottom: -40px;
+  margin-top: 20px;
+  margin-bottom: -10px;
 }
 
 .patternBrandLogo .brandLogo {
-  width: clamp(150px, 15vw, 220px);
+  width: clamp(70px, 7vw, 105px);
   max-width: 100%;
 }
 
@@ -364,7 +364,7 @@ img {
 .aboutUsHeading {
   margin: 0;
   color: #ffffff;
-  font-size: clamp(3.5rem, 7.5vw, 8rem);
+  font-size: clamp(2.8rem, 6vw, 6.4rem);
   line-height: 0.88;
   font-weight: 900;
   text-transform: uppercase;
@@ -374,7 +374,7 @@ img {
 .aboutMission {
   margin: 0;
   color: #db0034;
-  font-size: clamp(1.1rem, 2.3vw, 2.1rem);
+  font-size: clamp(0.975rem, 1.95vw, 1.8rem);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.06em;
