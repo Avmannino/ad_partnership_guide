@@ -36,9 +36,9 @@ const contactPeople = [
   },
 ];
 
-function SectionTitle({ eyebrow, title, intro, align = "left" }) {
+function SectionTitle({ eyebrow, title, intro, align = "left", className = "" }) {
   return (
-    <div className={`sectionTitle sectionTitle--${align}`}>
+    <div className={`sectionTitle sectionTitle--${align} ${className}`}>
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h2>{title}</h2>
       {intro ? <p className="sectionIntro">{intro}</p> : null}
@@ -165,6 +165,7 @@ export default function App() {
             <SectionTitle
               eyebrow=""
               title="DASHER BOARDS"
+              className="dasherTitle"
               intro="Placed on the interior rink wall, dasher board placements help improve brand visibility, create memorability, and generate engagement."
             />
 
