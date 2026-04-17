@@ -2,7 +2,7 @@ import "./App.css";
 
 const aboutParagraphs = [
   "Our indoor rink welcomes players, families, and guests year-round from across the greater Metro and Tri-State area.",
-  "With over 200 spectator seats, a pro shop with rental skates, and a self-serve beer wall, Wings Arena is more than just a rink; it's a community destination for games, celebrations, and lasting memories.",
+  "With over 200 spectator seats, a pro shop with rental skates, and self-serve beer & wine taps, Wings Arena is more than just a rink; it's a community destination for games, celebrations, and lasting memories.",
 ];
 
 const dasherViews = [
@@ -160,7 +160,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="pageSection splitFeatureSection">
+        <section className="pageSection splitFeatureSection dasherSection">
           <div className="splitFeatureLeft">
             <SectionTitle
               eyebrow=""
@@ -194,6 +194,12 @@ export default function App() {
                 </p>
               </div>
             </div>
+
+            <PlaceholderImage
+              src="/images/boards-secondary.jpg"
+              alt="Dasher boards secondary image"
+              className="dasherSecondaryImage"
+            />
           </div>
 
           <div className="sectionDivider splitFeatureDivider" />
@@ -211,6 +217,10 @@ export default function App() {
                   <span>{view}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="testimonialBlock">
+              <p className="testimonialQuote">"Advertising on the dasher boards at Wings Arena has been a great investment for our business. The placement gives us strong visibility during games, public sessions, and even through LiveBarn, so our brand is being seen far beyond just the people in the building. It's been a smart, high-impact way to stay visible in the local community." Mark | Greenwich, CT</p>
             </div>
           </div>
         </section>
@@ -308,43 +318,68 @@ export default function App() {
           </div>
         </section>
 
-        <section className="pageSection splitFeatureSection splitFeatureSection--alt">
+        <section className="pageSection splitFeatureSection splitFeatureSection--alt tvAdSection">
           <div className="splitFeatureLeft">
             <SectionTitle
               eyebrow="Digital Advertising"
-              title="LOBBY TV ADVERTISING"
-              intro="Reach visitors and families in high-traffic lobby, flow room, and mezzanine TV locations with premium digital advertising."
+              title="TV ADVERTISING"
+              intro="Reach visitors and families across multiple high-traffic TV locations throughout Wings Arena with premium digital advertising."
             />
 
-            <div className="contentStack">
-              <div className="contentBlock">
-                <h3>Video Advertising</h3>
-                <p>
-                  Full-motion creative designed for digital rotation across
-                  multiple in-facility TV displays.
-                </p>
-              </div>
+            <div className="tvSubSection">
+              <h3 className="tvSubHeading">Lobby TVs</h3>
+              <div className="contentStack">
+                <div className="contentBlock">
+                  <h3>Video Advertising</h3>
+                  <p>
+                    Full-motion creative designed for digital rotation across
+                    the arena’s lobby TV displays, seen by every guest as they
+                    enter and exit the facility.
+                  </p>
+                </div>
 
-              <div className="contentBlock">
-                <h3>Static Image Advertising</h3>
-                <p>
-                  High-impact still creative sized for the arena’s TV display
-                  network.
-                </p>
-              </div>
-
-              <div className="noteBlock">
-                Flexible scheduling may be available. Ad creative must align
-                with Wings Arena content guidelines.
+                <div className="contentBlock">
+                  <h3>Static Image Advertising</h3>
+                  <p>
+                    High-impact still creative sized for the lobby TV display
+                    network, providing consistent brand exposure throughout
+                    the day.
+                  </p>
+                </div>
               </div>
             </div>
+
+            <div className="tvSubSection">
+              <h3 className="tvSubHeading">Mezzanine TVs</h3>
+              <div className="contentStack">
+                <div className="contentBlock">
+                  <h3>Game & Event Coverage</h3>
+                  <p>
+                    Positioned above the bleachers, mezzanine TVs are viewed
+                    by spectators throughout every game, public skate, and
+                    event — delivering repeated brand impressions to an
+                    engaged, captive audience.
+                  </p>
+                </div>
+
+                <div className="contentBlock">
+                  <h3>Video & Static Formats</h3>
+                  <p>
+                    Both video and static creative formats are supported,
+                    giving partners flexible options to match their brand
+                    messaging and campaign goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <div className="sectionDivider splitFeatureDivider" />
 
-          <div className="splitFeatureRight">
+          <div className="splitFeatureRight tvAdRight">
             <PlaceholderImage
-              src="/images/lobby-tv.png"
+              src="/images/lobby-tv.jpg"
               alt="Lobby TV advertising examples"
               className="lobbyTvImage"
             />
@@ -354,7 +389,7 @@ export default function App() {
         <section className="pageSection splitFeatureSection">
           <div className="splitFeatureLeft mediaLeft">
             <PlaceholderImage
-              src="/images/locker-board.png"
+              src="/images/locker-board.jpg"
               alt="Digital locker room board"
               className="lockerBoardImage"
             />
