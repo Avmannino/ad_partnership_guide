@@ -818,8 +818,62 @@ img {
     width: min(calc(100% - 20px), var(--max-width));
   }
 
+  .coverSection {
+    min-height: min(82svh, 780px);
+  }
+
   .coverInner h1 {
     font-size: clamp(2.8rem, 7vw, 6.4rem);
+  }
+
+  .lockerImageTall {
+    min-height: clamp(240px, 34vw, 560px);
+  }
+
+  .lockerImageWide {
+    min-height: clamp(200px, 22vw, 360px);
+  }
+
+  .namingImage {
+    min-height: clamp(220px, 26vw, 460px);
+  }
+
+  .lockerBoardImage,
+  .contactImage {
+    min-height: clamp(220px, 28vw, 460px);
+  }
+}
+
+@media (max-width: 1150px) {
+  .coverSection {
+    min-height: min(75svh, 680px);
+  }
+
+  .coverInner h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+  }
+
+  .coverYear {
+    font-size: clamp(1.6rem, 2.6vw, 3rem);
+  }
+
+  .sectionTitle h2 {
+    font-size: clamp(2rem, 4.5vw, 4.8rem);
+  }
+
+  .aboutTopImage {
+    min-height: clamp(220px, 24vw, 380px);
+  }
+
+  .lockerImageTall {
+    min-height: clamp(220px, 30vw, 480px);
+  }
+
+  .lockerImageWide,
+  .namingImage,
+  .lockerBoardImage,
+  .contactImage {
+    min-height: clamp(200px, 24vw, 400px);
   }
 }
 
@@ -930,7 +984,7 @@ img {
   .namingImage,
   .lockerImageTall,
   .lockerImageWide {
-    min-height: clamp(260px, 50vw, 520px);
+    min-height: clamp(240px, 36vw, 460px);
   }
 
   .boardsHeroImage {
