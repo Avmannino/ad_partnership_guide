@@ -1,5 +1,7 @@
 import "./App.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 const aboutParagraphs = [
   "Our indoor rink welcomes players, families, and guests year-round from across the greater Metro and Tri-State area.",
   "With over 200 spectator seats, a pro shop with rental skates, and self-serve beer & wine taps, Wings Arena is more than just a rink; it's a community destination for games, celebrations, and lasting memories.",
@@ -62,7 +64,7 @@ function PlaceholderImage({ src, alt, className = "" }) {
   );
 }
 
-function BrandLogo({ className = "", alt = "Wings Arena logo", src = "/images/wings-logo.png" }) {
+function BrandLogo({ className = "", alt = "Wings Arena logo", src = `${BASE}images/wings-logo.png` }) {
   return (
     <div className={`brandLogoWrap ${className}`}>
       <img
@@ -105,7 +107,7 @@ export default function App() {
 
         <div className="coverRight">
           <PlaceholderImage
-            src="/images/cover-rink.jpg"
+            src={`${BASE}images/cover-rink.jpg`}
             alt="Cover rink image"
             className="coverImage"
           />
@@ -116,12 +118,12 @@ export default function App() {
         <section className="pageSection aboutSection">
           <div className="aboutTopImages">
             <PlaceholderImage
-              src="/images/about-exterior.jpg"
+              src={`${BASE}images/about-exterior.jpg`}
               alt="Arena exterior"
               className="aboutTopImage"
             />
             <PlaceholderImage
-              src="/images/about-player.jpg"
+              src={`${BASE}images/about-player.jpg`}
               alt="Youth hockey player"
               className="aboutTopImage"
             />
@@ -129,7 +131,7 @@ export default function App() {
 
           <div className="aboutBottom">
             <div className="aboutLeft">
-              <BrandLogo className="patternBrandLogo" alt="Wings Arena logo in about section" src="/images/wings-logo-alt.png" />
+              <BrandLogo className="patternBrandLogo" alt="Wings Arena logo in about section" src={`${BASE}images/wings-logo-alt.png`} />
               <h2 className="aboutUsHeading">ABOUT US</h2>
               <p className="aboutMission">OUR STORY & MISSION</p>
             </div>
@@ -196,7 +198,7 @@ export default function App() {
             </div>
 
             <PlaceholderImage
-              src="/images/boards-secondary.jpg"
+              src={`${BASE}images/boards-secondary.jpg`}
               alt="Dasher boards secondary image"
               className="dasherSecondaryImage"
             />
@@ -206,7 +208,7 @@ export default function App() {
 
           <div className="splitFeatureRight">
             <PlaceholderImage
-              src="/images/boards-main.jpg"
+              src={`${BASE}images/boards-main.png`}
               alt="Dasher boards visibility examples"
               className="boardsHeroImage"
             />
@@ -230,7 +232,7 @@ export default function App() {
             <div className="visualBlock">
               <div className="visualLabel">Package One</div>
               <PlaceholderImage
-                src="/images/locker-room-door.png"
+                src={`${BASE}images/locker-room-door.png`}
                 alt="Locker room door branding"
                 className="lockerImageTall"
               />
@@ -239,7 +241,7 @@ export default function App() {
             <div className="visualBlock">
               <div className="visualLabel visualLabel--secondary">Package Two</div>
               <PlaceholderImage
-                src="/images/locker-room-interior.png"
+                src={`${BASE}images/locker-room-interior.png`}
                 alt="Locker room interior branding"
                 className="lockerImageWide"
               />
@@ -276,44 +278,6 @@ export default function App() {
               <div className="noteBlock">
                 Custom creative execution can be tailored to fit your brand.
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pageSection splitFeatureSection">
-          <div className="splitFeatureLeft">
-            <SectionTitle
-              eyebrow="Premier Opportunity"
-              title="ARENA NAMING RIGHTS"
-              intro="Our naming-rights partnership represents the highest-visibility brand opportunity at Wings Arena and can extend across major facility and marketing touchpoints."
-            />
-
-            <div className="benefitsCard">
-              <h3>Comprehensive Benefits Include</h3>
-              <ul>
-                {namingBenefits.map((benefit) => (
-                  <li key={benefit}>{benefit}</li>
-                ))}
-              </ul>
-            </div>
-
-            <p className="ctaInline">
-              Contact us to explore this unique opportunity.
-            </p>
-          </div>
-
-          <div className="sectionDivider splitFeatureDivider" />
-
-          <div className="splitFeatureRight">
-            <PlaceholderImage
-              src="/images/naming-example.png"
-              alt="Arena naming rights example"
-              className="namingImage"
-            />
-            <div className="captionBox">
-              Images shown are illustrative. Wings Arena can work with partners
-              to customize branding placements and create a tailored
-              sponsorship presentation.
             </div>
           </div>
         </section>
@@ -378,8 +342,14 @@ export default function App() {
           <div className="sectionDivider splitFeatureDivider" />
 
           <div className="splitFeatureRight tvAdRight">
+            <div className="videoCard">
+              <video className="videoEmbed" autoPlay loop muted playsInline>
+                <source src={`${BASE}videos/tv-ads.mp4`} type="video/mp4" />
+              </video>
+            </div>
+
             <PlaceholderImage
-              src="/images/lobby-tv.jpg"
+              src={`${BASE}images/lobby-tv.jpg`}
               alt="Lobby TV advertising examples"
               className="lobbyTvImage"
             />
@@ -389,7 +359,7 @@ export default function App() {
         <section className="pageSection splitFeatureSection">
           <div className="splitFeatureLeft mediaLeft">
             <PlaceholderImage
-              src="/images/locker-board.jpg"
+              src={`${BASE}images/locker-board.png`}
               alt="Digital locker room board"
               className="lockerBoardImage"
             />
@@ -400,7 +370,7 @@ export default function App() {
           <div className="splitFeatureRightText">
             <SectionTitle
               eyebrow="Digital Advertising"
-              title="DIGITAL LOCKER ROOM BOARD"
+              title={"DIGITAL LOCKER ROOM BOARD"}
               intro="Youth and adult players check the digital locker room board daily to find their assigned locker room, giving brand partners strong recurring visibility."
             />
 
@@ -417,10 +387,48 @@ export default function App() {
           </div>
         </section>
 
+        <section className="pageSection splitFeatureSection">
+          <div className="splitFeatureLeft">
+            <SectionTitle
+              eyebrow="Premier Opportunity"
+              title="ARENA NAMING RIGHTS"
+              intro="Our naming-rights partnership represents the highest-visibility brand opportunity at Wings Arena and can extend across major facility and marketing touchpoints."
+            />
+
+            <div className="benefitsCard">
+              <h3>Comprehensive Benefits Include</h3>
+              <ul>
+                {namingBenefits.map((benefit) => (
+                  <li key={benefit}>{benefit}</li>
+                ))}
+              </ul>
+            </div>
+
+            <p className="ctaInline">
+              Contact us to explore this unique opportunity.
+            </p>
+          </div>
+
+          <div className="sectionDivider splitFeatureDivider" />
+
+          <div className="splitFeatureRight">
+            <PlaceholderImage
+              src={`${BASE}images/naming-example.png`}
+              alt="Arena naming rights example"
+              className="namingImage"
+            />
+            <div className="captionBox">
+              Images shown are illustrative. Wings Arena can work with partners
+              to customize branding placements and create a tailored
+              sponsorship presentation.
+            </div>
+          </div>
+        </section>
+
         <section className="pageSection contactSection">
           <div className="contactImageWrap">
             <PlaceholderImage
-              src="/images/contact-rink.png"
+              src={`${BASE}images/contact-rink.jpg`}
               alt="Rink interior contact section image"
               className="contactImage"
             />
@@ -432,30 +440,15 @@ export default function App() {
             <SectionTitle
               eyebrow="Get In Touch"
               title="CONTACT US"
-              intro="Interested in a partnership, have questions, or want to propose a custom idea? Reach out to one of our contacts below."
+              intro="Interested in a partnership, have questions, or want to propose a custom idea? Reach out to us below."
             />
 
             <div className="contactList">
-              {contactPeople.map((person) => (
-                <div className="contactCard" key={person.email}>
-                  <h3>
-                    {person.name} <span>| {person.title}</span>
-                  </h3>
-                  <p>
-                    <a href={`mailto:${person.email}`}>{person.email}</a>
-                    {person.phone ? ` | ${person.phone}` : ""}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="generalInquiry">
-              <p>
-                For all general inquiries:
-                <br />
-                <a href="mailto:info@wingsarena.com">info@wingsarena.com</a> |
-                (203) 357-1055 | 5 Barry Pl, Stamford, CT 06902
-              </p>
+              <div className="contactCard">
+                <p>
+                  <a href="mailto:info@wingsarena.com">info@wingsarena.com</a>
+                </p>
+              </div>
             </div>
           </div>
         </section>
