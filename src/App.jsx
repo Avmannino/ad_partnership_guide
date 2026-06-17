@@ -227,10 +227,9 @@ export default function App() {
           </div>
         </section>
 
-        <section className="pageSection splitFeatureSection splitFeatureSection--alt">
+        <section className="pageSection splitFeatureSection splitFeatureSection--alt lockerSection">
           <div className="visualStack">
             <div className="visualBlock">
-              <div className="visualLabel">Package One</div>
               <PlaceholderImage
                 src={`${BASE}images/locker-room-door.png`}
                 alt="Locker room door branding"
@@ -239,7 +238,6 @@ export default function App() {
             </div>
 
             <div className="visualBlock">
-              <div className="visualLabel visualLabel--secondary">Package Two</div>
               <PlaceholderImage
                 src={`${BASE}images/locker-room-interior.png`}
                 alt="Locker room interior branding"
@@ -257,6 +255,12 @@ export default function App() {
               intro="Used by youth and adult players weekly, our visitor locker room branding opportunity is designed to build recognition and brand recall."
             />
 
+            <PlaceholderImage
+              src={`${BASE}images/locker-room-door.png`}
+              alt="Locker room door branding"
+              className="lockerImageTall lockerMobileImg"
+            />
+
             <div className="contentStack">
               <div className="contentBlock">
                 <h3>Package 1</h3>
@@ -265,6 +269,12 @@ export default function App() {
                   digital schedule and locker room board.
                 </p>
               </div>
+
+              <PlaceholderImage
+                src={`${BASE}images/locker-room-interior.png`}
+                alt="Locker room interior branding"
+                className="lockerImageWide lockerMobileImg"
+              />
 
               <div className="contentBlock">
                 <h3>Package 2</h3>
@@ -289,6 +299,19 @@ export default function App() {
               title="TV ADVERTISING"
               intro="Reach visitors and families across multiple high-traffic TV locations throughout Wings Arena with premium digital advertising."
             />
+
+            <div className="tvAdMediaMobile">
+              <div className="videoCard">
+                <video className="videoEmbed" autoPlay loop muted playsInline>
+                  <source src={`${BASE}videos/tv-ads.mp4`} type="video/mp4" />
+                </video>
+              </div>
+              <PlaceholderImage
+                src={`${BASE}images/lobby-tv.jpg`}
+                alt="Lobby TV advertising examples"
+                className="lobbyTvImage"
+              />
+            </div>
 
             <div className="tvSubSection">
               <h3 className="tvSubHeading">Lobby TVs</h3>
@@ -356,7 +379,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="pageSection splitFeatureSection">
+        <section className="pageSection splitFeatureSection lockerBoardSection">
           <div className="splitFeatureLeft mediaLeft">
             <PlaceholderImage
               src={`${BASE}images/locker-board.png`}
@@ -374,6 +397,12 @@ export default function App() {
               intro="Youth and adult players check the digital locker room board daily to find their assigned locker room, giving brand partners strong recurring visibility."
             />
 
+            <PlaceholderImage
+              src={`${BASE}images/locker-board.png`}
+              alt="Digital locker room board"
+              className="lockerBoardImage lockerMobileImg"
+            />
+
             <div className="contentStack">
               <div className="contentBlock">
                 <h3>"Presented By" Sponsorship</h3>
@@ -387,12 +416,18 @@ export default function App() {
           </div>
         </section>
 
-        <section className="pageSection splitFeatureSection">
+        <section className="pageSection splitFeatureSection namingSection">
           <div className="splitFeatureLeft">
             <SectionTitle
               eyebrow="Premier Opportunity"
               title="ARENA NAMING RIGHTS"
               intro="Our naming-rights partnership represents the highest-visibility brand opportunity at Wings Arena and can extend across major facility and marketing touchpoints."
+            />
+
+            <PlaceholderImage
+              src={`${BASE}images/naming-example.png`}
+              alt="Arena naming rights example"
+              className="namingImage lockerMobileImg"
             />
 
             <div className="benefitsCard">

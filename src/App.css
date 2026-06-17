@@ -714,6 +714,14 @@ img {
   flex-direction: column;
 }
 
+.tvAdMediaMobile {
+  display: none;
+}
+
+.lockerMobileImg {
+  display: none;
+}
+
 .tvAdRight .lobbyTvImage {
   min-height: clamp(500px, 65vw, 1000px);
 }
@@ -866,7 +874,16 @@ img {
   }
 
   .aboutTopImage {
-    min-height: clamp(220px, 24vw, 380px);
+    height: clamp(200px, 55vw, 340px);
+    min-height: unset;
+  }
+
+  .aboutTopImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .lockerImageTall {
@@ -949,11 +966,11 @@ img {
   }
 
   .coverRight {
-    min-height: clamp(320px, 48vw, 560px);
+    display: none;
   }
 
-  .coverImage {
-    min-height: clamp(320px, 48vw, 560px);
+  .coverDivider {
+    display: none;
   }
 
   .aboutTopImages {
@@ -995,9 +1012,50 @@ img {
     min-height: unset;
   }
 
-  .tvAdRight .lobbyTvImage {
+  .lockerSection .visualStack {
+    display: none;
+  }
+
+  .lockerBoardSection .mediaLeft {
+    display: none;
+  }
+
+  .namingSection .splitFeatureRight {
+    display: none;
+  }
+
+  .lockerMobileImg {
+    display: block;
+    margin-top: clamp(16px, 2.5vw, 24px);
+  }
+
+  .tvAdSection .tvAdRight {
+    display: none;
+  }
+
+  .tvAdMediaMobile {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2vw, 20px);
+    margin-top: clamp(16px, 2.5vw, 24px);
+  }
+
+  .tvAdMediaMobile .videoCard {
+    margin-top: 0;
+  }
+
+  .tvAdMediaMobile .lobbyTvImage {
     flex: none;
     min-height: clamp(380px, 75vw, 620px);
+  }
+
+  .tvAdMediaMobile .lobbyTvImage img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .dasherTitle h2 {
@@ -1007,6 +1065,23 @@ img {
 
   .coverInner {
     margin-bottom: 40px;
+  }
+
+  /* Reorder sections so text/header always appears above images on mobile */
+  .splitFeatureRightText {
+    order: -1;
+  }
+
+  .visualStack {
+    order: 1;
+  }
+
+  .mediaLeft {
+    order: 1;
+  }
+
+  .contactImageWrap {
+    order: 1;
   }
 }
 
@@ -1114,7 +1189,7 @@ img {
   }
 
   .aboutTopImage {
-    min-height: 240px;
+    height: clamp(180px, 48vw, 280px);
   }
 
   .lockerBoardImage,
