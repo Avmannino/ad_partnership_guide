@@ -479,11 +479,9 @@ export default function App() {
             />
 
             <div className="contactList">
-              <div className="contactCard">
-                <p>
-                  <a href="mailto:info@wingsarena.com">info@wingsarena.com</a>
-                </p>
-              </div>
+              <a href="mailto:info@wingsarena.com" className="contactCard contactCardLink">
+                info@wingsarena.com
+              </a>
             </div>
           </div>
         </section>

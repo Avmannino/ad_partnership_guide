@@ -610,6 +610,19 @@ img {
   text-align: center;
 }
 
+.contactCardLink {
+  display: block;
+  font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+  font-weight: 600;
+  color: #d6e6ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contactCardLink:hover {
+  text-decoration: underline;
+}
+
 .contactCard h3 span {
   font-weight: 700;
   color: #c9dcff;
