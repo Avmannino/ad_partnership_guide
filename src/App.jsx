@@ -165,7 +165,7 @@ export default function App() {
         <section className="pageSection splitFeatureSection dasherSection">
           <div className="splitFeatureLeft">
             <SectionTitle
-              eyebrow=""
+              eyebrow="Rink Advertising"
               title="DASHER BOARDS"
               className="dasherTitle"
               intro="Placed on the interior rink wall, dasher board placements help improve brand visibility, create memorability, and generate engagement."
@@ -250,7 +250,7 @@ export default function App() {
 
           <div className="splitFeatureRightText">
             <SectionTitle
-              eyebrow=""
+              eyebrow="Facility Branding"
               title="VISITOR LOCKER ROOM BRANDING RIGHTS"
               intro="Used by youth and adult players weekly, our visitor locker room branding opportunity is designed to build recognition and brand recall."
             />
@@ -419,7 +419,7 @@ export default function App() {
         <section className="pageSection splitFeatureSection namingSection">
           <div className="splitFeatureLeft">
             <SectionTitle
-              eyebrow="Premier Opportunity"
+              eyebrow="Premium Branding"
               title="ARENA NAMING RIGHTS"
               intro="Our naming-rights partnership represents the highest-visibility brand opportunity at Wings Arena and can extend across major facility and marketing touchpoints."
             />
